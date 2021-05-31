@@ -32,6 +32,9 @@ body {
 .skip-link:focus {
   top: 0;
 }
+.checked {
+  color: orange;
+}
 /********** 400 px vw ***********/
 header {
   width: 100%;
@@ -146,9 +149,7 @@ header {
   display: flex;
   flex-flow: column nowrap;
 }
-.middle-card .checked {
-  color: orange;
-}
+
 .middle-card .rating {
   display: flex;
   justify-content: flex-start;
@@ -206,6 +207,74 @@ header {
 .favorite svg:hover {
   filter: invert(32%) sepia(90%) saturate(3967%) hue-rotate(340deg)
     brightness(87%) contrast(116%);
+}
+/*********** restaurant-detail ************/
+.restaurant-detail {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 32px 16px;
+}
+.restaurant-detail h1 {
+  width: 100%;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+  margin: 16px 0;
+  padding-bottom: 32px;
+}
+.restaurant-detail .info {
+  display: flex;
+  margin-bottom: 7px;
+}
+.restaurant-detail .info p {
+  margin-right: 6px;
+}
+.restaurant-detail p {
+  color: #2d333f;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+.restaurant-detail .menu {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  width: 100%;
+  margin-bottom: 32px;
+}
+.restaurant-detail .menu .item {
+  margin-bottom: 16px;
+}
+.restaurant-detail .menu .item h3 {
+  display: inline-block;
+  border-bottom: 1px solid #d8d9db;
+  color: #2d333f;
+  margin-bottom: 2px;
+}
+.restaurant-detail .menu .item .list-menu-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.reviews {
+  width: 100%;
+}
+.review-container {
+  width: 100%;
+  padding: 0 16px;
+}
+.review-container .review-item {
+  border-bottom: 1px solid #d8d9db;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.review-container .review-item span:first-child {
+  font-size: 20px;
+}
+.review-container .review-item span:last-child {
+  font-style: italic;
 }
 /*********** footer ***********/
 footer {
