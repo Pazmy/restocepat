@@ -35,6 +35,22 @@ body {
 .checked {
   color: orange;
 }
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /********** 400 px vw ***********/
 header {
   width: 100%;
@@ -134,7 +150,7 @@ header {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .card .top-card {
   min-width: 350px;
@@ -335,6 +351,7 @@ footer {
     margin-left: 25px;
     max-width: 90%;
     margin: 0 auto;
+    margin-bottom: 60px;
   }
   .card .top-card {
     min-width: 300px;
@@ -391,6 +408,7 @@ footer {
     min-width: 300px;
     display: grid;
     grid-template-rows: 200px auto auto;
+    margin-bottom: 60px;
   }
   .card .top-card {
     min-width: 300px;

@@ -1,5 +1,5 @@
-import data from "../../../DATA.json";
 import RestaurantSource from "../../data/restaurant-source";
+import LikeButtonInitiator from "../../utils/like-button-initiator";
 import { RestaurantCard } from "../templates/template-creator";
 
 const Home = {
