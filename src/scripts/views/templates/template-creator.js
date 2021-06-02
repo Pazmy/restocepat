@@ -1,7 +1,7 @@
-import CONFIG from "../../globals/config";
+import CONFIG from '../../globals/config'
 
 const RestaurantCard = (restaurant) => {
-  const description = restaurant.description.slice(0, 70);
+  const description = restaurant.description.slice(0, 70)
   return `<div class="card">
       <div class="top-card">
       <a href="#/detail/${restaurant.id}">
@@ -28,13 +28,13 @@ const RestaurantCard = (restaurant) => {
         <a href="#/detail/${restaurant.id}" class="details">Details</a>
         
       </div>
-    </div>`;
-};
+    </div>`
+}
 
 const RestaurantDetail = (restaurant) => {
-  const foods = restaurant.menus.foods;
-  const drinks = restaurant.menus.drinks;
-  const reviews = restaurant.customerReviews;
+  const foods = restaurant.menus.foods
+  const drinks = restaurant.menus.drinks
+  const reviews = restaurant.customerReviews
 
   return `<img
     src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}"
@@ -79,8 +79,8 @@ const RestaurantDetail = (restaurant) => {
     </div>
   </div>
   
-`;
-};
+`
+}
 const createLikeButtonTemplate = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">
   <svg
@@ -94,43 +94,43 @@ const createLikeButtonTemplate = () => `
   />
 </svg>
   </button>
-`;
+`
 
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"/></svg>
   </button>
-`;
+`
 
 const listItemMenu = function (obj) {
-  let li = "";
+  let li = ''
   obj.forEach((i) => {
-    li += `<li>${i.name}`;
-  });
-  return li;
-};
+    li += `<li>${i.name}`
+  })
+  return li
+}
 
 const categories = function (restaurant) {
-  let menu = "";
-  restaurant.categories.forEach((i) => (menu += ` ${i.name}`));
-  return menu;
-};
+  let menu = ''
+  restaurant.categories.forEach((i) => (menu += ` ${i.name}`))
+  return menu
+}
 
 const customerReviews = function (review) {
-  let reviewItem = "";
+  let reviewItem = ''
   review.forEach((i) => {
     reviewItem += `
     <div class="review-item">
     <span>${i.name}, ${i.date}</span>
     <span>${i.review}</span>
-    </div>`;
-  });
-  return reviewItem;
-};
+    </div>`
+  })
+  return reviewItem
+}
 
 export {
   RestaurantCard,
   RestaurantDetail,
   createLikeButtonTemplate,
-  createLikedButtonTemplate,
-};
+  createLikedButtonTemplate
+}
