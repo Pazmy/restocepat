@@ -102,6 +102,8 @@ const createUnlikeRestaurantButtonTemplate = () => `
   </button>
 `
 
+const emptyLikeTemplate = () => '<div class="empty-like"><h3>There are no restaurants</h3> </div>'
+
 const listItemMenu = function (obj) {
   let li = ''
   obj.forEach((i) => {
@@ -132,5 +134,6 @@ export {
   RestaurantCard,
   RestaurantDetail,
   createLikeRestaurantButtonTemplate,
-  createUnlikeRestaurantButtonTemplate
+  createUnlikeRestaurantButtonTemplate,
+  emptyLikeTemplate
 }

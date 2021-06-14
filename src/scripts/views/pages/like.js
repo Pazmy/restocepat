@@ -1,6 +1,6 @@
 import FavoriteRestaurant from '../../data/database'
 import LoadingScreen from '../../utils/loading-screen'
-import { RestaurantCard } from '../templates/template-creator'
+import { emptyLikeTemplate, RestaurantCard } from '../templates/template-creator'
 
 const Like = {
   async render () {
@@ -16,9 +16,13 @@ const Like = {
     const restaurants = await FavoriteRestaurant.getAllRestaurant()
     LoadingScreen.hideLoading()
     const section2ContainerMenu = document.querySelector('#container-menu')
-    restaurants.forEach((restaurant) => {
-      section2ContainerMenu.innerHTML += RestaurantCard(restaurant)
-    })
+    if (restaurants.length === 0) {
+      section2ContainerMenu.innerHTML += emptyLikeTemplate()
+    } else {
+      restaurants.forEach((restaurant) => {
+        section2ContainerMenu.innerHTML += RestaurantCard(restaurant)
+      })
+    }
   }
 }
 
