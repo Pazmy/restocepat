@@ -6,6 +6,11 @@ const Home = {
   async render () {
     return ` <section class="section-1">
     <div class="hero-bg" aria-label="hero image background">
+      <picture>
+      <source media="max-width:600px" srcset="images/heros/hero-image-small.jpg">
+      <img src="images/heros/hero-image-large.jpg" alt="hero image background">
+      <div class="overlay"></div>
+      </picture>
       <h1>Restaurant with menu around your location</h1>
     </div>
   </section>

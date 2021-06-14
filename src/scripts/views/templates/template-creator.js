@@ -1,4 +1,6 @@
 import CONFIG from '../../globals/config'
+import 'lazysizes'
+import 'lazysizes/plugins/parent-fit/ls.parent-fit'
 
 const RestaurantCard = (restaurant) => {
   const description = restaurant.description.slice(0, 70)
@@ -6,8 +8,9 @@ const RestaurantCard = (restaurant) => {
       <div class="top-card">
       <a href="#/detail/${restaurant.id}">
         <img
-          src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}"
+          data-src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}"
           alt="${restaurant.name}"
+          class="lazyload"
         /></a>
       </div>
       <div class="middle-card">
